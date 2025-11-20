@@ -1,0 +1,15 @@
+g++ -O2 -std=c++11 -fopenmp -o mergesort_seq mergesort_seq_nocopy.cpp
+======================================
+ SLURM job information
+ Job ID: 10721
+ Job Name: mergesort_seq
+ Node: gal-c1
+ CPUs: 1
+======================================
+
+sequential run
+1.07606
+
+real	0m1.239s
+user	0m1.219s
+sys	0m0.015s
