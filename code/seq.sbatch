@@ -19,7 +19,7 @@ echo "======================================"
 echo ""
 
 # Problem size
-N=50000
+N=10000000
 
 echo "sequential run"
 { time ./mergesort_seq ${N}; } 2>&1

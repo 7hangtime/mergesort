@@ -19,7 +19,7 @@ echo "======================================"
 echo ""
 
 # Problem size
-N=50000
+N=10000000
 
 echo "1 thread"
 { time ./mergesort_par ${N} 1; } 2>&1
