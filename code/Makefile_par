@@ -1,0 +1,13 @@
+CXX = g++
+CXXFLAGS = -O2 -std=c++11 -fopenmp
+
+TARGET = mergesort_par
+SRC    = mergesort_par.cpp
+
+all: $(TARGET)
+
+$(TARGET): $(SRC) omp_tasking.hpp
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
+
+clean:
+	rm -f $(TARGET)
