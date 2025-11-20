@@ -19,7 +19,7 @@ echo "======================================"
 echo ""
 
 # Test size (modify if needed)
-N=10000000
+N=50000
 
 # Sequential run (no threads argument)
 { time ./mergesort_seq ${N} > seq_n${N}.out; } 2>&1
