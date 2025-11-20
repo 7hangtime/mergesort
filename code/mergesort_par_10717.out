@@ -1,0 +1,29 @@
+g++ -O2 -std=c++11 -fopenmp -o mergesort_par mergesort_par.cpp
+======================================
+ SLURM job information
+ Job ID: 10717
+ Job Name: mergesort_par
+ Node: gal-c1
+ CPUs: 8
+======================================
+
+1 thread
+
+real	0m0.008s
+user	0m0.006s
+sys	0m0.001s
+2 threads
+
+real	0m0.006s
+user	0m0.004s
+sys	0m0.003s
+4 threads
+
+real	0m0.005s
+user	0m0.007s
+sys	0m0.003s
+8 threads
+
+real	0m0.005s
+user	0m0.010s
+sys	0m0.002s
