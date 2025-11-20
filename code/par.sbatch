@@ -22,15 +22,20 @@ echo ""
 N=50000
 
 # 1 thread
-{ time ./mergesort_par ${N} 1 > par_n${N}_t1.out; } 2>&1
+echo "1 thread"
+{ time ./mergesort_par ${N} 1 > par_n${N}_$SLURM_JOB_ID_t1.out; } 2>&1
 
 # 2 threads
-{ time ./mergesort_par ${N} 2 > par_n${N}_t2.out; } 2>&1
+echo "2 thread"
+{ time ./mergesort_par ${N} 2 > par_n${N}_$SLURM_JOB_ID_t2.out; } 2>&1
 
 # 4 threads
-{ time ./mergesort_par ${N} 4 > par_n${N}_t4.out; } 2>&1
+echo "4 threads"
+
+{ time ./mergesort_par ${N} 4 > par_n${N}_$SLURM_JOB_ID_t4.out; } 2>&1
 
 # 8 threads
-{ time ./mergesort_par ${N} 8 > par_n${N}_t8.out; } 2>&1
+echo "8 threads"
+{ time ./mergesort_par ${N} 8 > par_n${N}_$SLURM_JOB_ID_t8.out; } 2>&1
 
 rm mergesort_par
