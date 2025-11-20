@@ -18,10 +18,10 @@ echo " CPUs: $SLURM_CPUS_PER_TASK"
 echo "======================================"
 echo ""
 
-# Test size (modify if needed)
+# Problem size
 N=50000
 
-# Sequential run (no threads argument)
-{ time ./mergesort_seq ${N} > seq_n${N}.out; } 2>&1
+echo "sequential run"
+{ time ./mergesort_seq ${N}; } 2>&1
 
 rm mergesort_seq

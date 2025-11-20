@@ -21,21 +21,16 @@ echo ""
 # Problem size
 N=50000
 
-# 1 thread
 echo "1 thread"
-{ time ./mergesort_par ${N} 1 > par_n${N}_$SLURM_JOB_ID_t1.out; } 2>&1
+{ time ./mergesort_par ${N} 1; } 2>&1
 
-# 2 threads
-echo "2 thread"
-{ time ./mergesort_par ${N} 2 > par_n${N}_$SLURM_JOB_ID_t2.out; } 2>&1
+echo "2 threads"
+{ time ./mergesort_par ${N} 2; } 2>&1
 
-# 4 threads
 echo "4 threads"
+{ time ./mergesort_par ${N} 4; } 2>&1
 
-{ time ./mergesort_par ${N} 4 > par_n${N}_$SLURM_JOB_ID_t4.out; } 2>&1
-
-# 8 threads
 echo "8 threads"
-{ time ./mergesort_par ${N} 8 > par_n${N}_$SLURM_JOB_ID_t8.out; } 2>&1
+{ time ./mergesort_par ${N} 8; } 2>&1
 
 rm mergesort_par
